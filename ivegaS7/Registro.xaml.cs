@@ -21,11 +21,12 @@ namespace ivegaS7
 
         private void btnRegistrar_Clicked(object sender, EventArgs e)
         {
-            var datos = new Estudiante { Nombre = txtNombre.Text, Usuario = txtNombre.Text, Contrasena = txtContrasena.Text };
+            var datos = new Estudiante { Nombre = txtNombre.Text, Usuario = txtUsuario.Text, Contrasena = txtContrasena.Text };
             con.InsertAsync(datos);
             txtNombre.Text = "";
             txtContrasena.Text = "";
             txtUsuario.Text = "";
+            DisplayAlert("Alerta", "Estudiante agregado correctamente", "Ok");
             Navigation.PushAsync(new Login());
         }
     }

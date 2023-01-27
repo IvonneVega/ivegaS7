@@ -4,9 +4,15 @@
              x:Class="ivegaS7.Elemento">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="mensaje"/>
+            <Label Text="Nombre: "/>
+            <Entry x:Name="Nombre" Placeholder="Nombre"/>
+            <Label Text="Usuario: "/>
+            <Entry x:Name="Usuario" Placeholder="Usuario"/>
+            <Label Text="Nombre: "/>
+            <Entry x:Name="Contrasena" Placeholder="Contraseña"/>
+            <Button x:Name="btnActualizar" Text="Actualizar" Clicked="btnActualizar_Clicked" BackgroundColor="LawnGreen"/>
+            <Button x:Name="btnEliminar" Text="Eliminar" Clicked="btnEliminar_Clicked" BackgroundColor="Red"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
